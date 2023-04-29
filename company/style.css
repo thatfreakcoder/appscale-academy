@@ -2,7 +2,7 @@ body {
     box-sizing: border-box!important;
     margin: 0!important;
     padding: 0!important;
-    background-color: #4983ed!important;
+    background-color: #ebebeb!important;
 }
 
 .navbar {
@@ -19,15 +19,30 @@ body {
 }
 
 .card-img-top {
-    margin-top: 20px!important;
-    width: fit-content!important;
+    width: 18rem!important;
     align-self: center;
     padding: 0 2rem;
-    background-color: #ebebeb;
+}
+
+.founder-card-img-top {
+    width: 12rem!important;
+    align-self: center;
+    padding: 0 2rem;
 }
 
 .card-cta a {
     border-radius: 50rem!important;
+}
+
+.badge {
+    font-size: 1.2rem!important;
+}
+
+.wrapper {
+    background-color: #FFF;
+    border-radius: 15px;
+    border: 2px solid #1c1c1c;
+    background-color: #FFF;
 }
 
 
@@ -37,6 +52,9 @@ body {
     .navbar-brand-img {
         width: 15rem;
     }
+    .profile-header {
+        border-bottom: 2px solid #1c1c1c
+    }
 }
 
 
@@ -45,5 +63,8 @@ body {
 @media screen and (min-width: 768px) {
     .navbar-brand-img {
         width: 20rem;
+    }
+    .profile-header {
+        border-right: 2px solid #1c1c1c
     }
 }

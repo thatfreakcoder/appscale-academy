@@ -38,13 +38,13 @@
             <h3 class="text-light text-bold mx-2"><strong>Search By</strong></h3>
 
             <div class="btn-group mx-2">
-                <button type="button" class="btn bg-light text-bold"><h3 class="text-dark text-bold" id="sort-title"><strong>Founders</strong></h3></button>
+                <button type="button" class="btn bg-light text-bold" data-bs-toggle="dropdown"><h3 class="text-dark text-bold" id="sort-title"><strong>Founders</strong></h3></button>
                 <button type="button" class="btn bg-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu" id="sort-list">
                     <li><button class="dropdown-item" id="sort-by-company"><h2>Companies</h2></button></li>
-                    <li><button class="dropdown-item" id="sort-by-category"><h2>Categories</h2></button></li>
+                    <!-- <li><button class="dropdown-item" id="sort-by-category"><h2>Categories</h2></button></li> -->
                 </ul>
             </div>
         </div>
@@ -53,18 +53,6 @@
             <div class="spinner-border text-light m-5" role="status" id="spinner" style="width: 10rem; height: 10rem;">
                 <span class="sr-only visually-hidden">Loading...</span>
             </div>
-            <!-- <div class="card col-12 mx-2 my-4" style="width: 18rem;">
-                <img src="https://media-public.canva.com/stDv8/MAFLWJstDv8/1/t.png" class="card-img-top" alt="founder image">
-                <div class="card-body d-flex flex-column align-items-center">
-                    <h2 class="card-title"><strong>Yuvraj Dagur</strong></h2>
-                    <h5 class="card-title">LocalEyes</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="card-cta d-flex flex-row">
-                        <a href="https://linkedin.com/in.yuvraj-dagur/" target="_blank" class="btn btn-primary mx-2 d-flex" style="vertical-align: middle;"><img src="./assets/imgs/linkedin.png" alt="linkedin" style="width: 1.5rem;" class="me-2">Connect</a>
-                        <a href="profile?id=yuvraj-dagur-localeyes" class="btn btn-outline-primary mx-2 d-flex" style="vertical-align: middle;"><img src="./assets/imgs/profile.png" alt="profile" style="width: 1.5rem;" class="me-2">Details</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
     <script src="./app.js" defer></script>

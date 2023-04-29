@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("spinner").remove()
             if (data.status === "success") {
                 data.data.forEach(element => {
-                    grid.innerHTML += `<div class="card col-12 mx-2 my-4 text-center" style="width: 18rem;">
+                    grid.innerHTML += `<div class="card col-12 mx-2 my-4 text-center" style="width: 18rem; border-radius: 20px">
                     <img src=${imgs[Math.floor(Math.random() * imgs.length)]} class="card-img-top" alt="founder image">
                     <div class="card-body d-flex flex-column align-items-center">
                         <h2 class="card-title" style="font-size: 1.325rem;"><strong>${element.name}</strong></h2>
@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('sort-by-company').addEventListener('click', () => {
     document.getElementById('sort-title').innerHTML = `<strong>Companies</strong>`
-    document.getElementById('sort-list').innerHTML = `<li><button class="dropdown-item" id="sort-by-founders"><h2>Founders</h2></button></li>
-    <li><button class="dropdown-item" id="sort-by-category"><h2>Categories</h2></button></li>`
+    document.getElementById('sort-list').innerHTML = `<li><button class="dropdown-item" id="sort-by-founders"><h2>Founders</h2></button></li>`
     grid.innerHTML = `<div class="spinner-border text-light m-5" id="spinner" role="status" style="width: 10rem; height: 10rem;">
     <span class="sr-only visually-hidden">Loading...</span>
 </div>`
@@ -53,14 +52,14 @@ document.getElementById('sort-by-company').addEventListener('click', () => {
             document.getElementById("spinner").remove()
             if (data.status === "success") {
                 data.data.forEach(element => {
-                    grid.innerHTML += `<div class="card col-12 mx-2 my-4 text-center" style="width: 18rem;">
+                    grid.innerHTML += `<div class="card col-12 mx-2 my-4 text-center" style="width: 18rem; border-radius: 20px">
                     <img src=${element.img} class="card-img-top" alt="founder image" style="width: 10rem!important">
                     <div class="card-body d-flex flex-column align-items-center">
                         <h2 class="card-title" style="font-size: 1.325rem;"><strong>${element.name}</strong></h2>
                         <h5 class="card-title">${element.category}</h5>
                         <p class="card-text">${element.about}</p>
                         <div class="card-cta d-flex flex-row">
-                            <a href="${element.download}" target="_blank" class="btn btn-primary mx-2 d-flex" style="vertical-align: middle;"><img src="./assets/imgs/linkedin.png" alt="linkedin" style="width: 1.5rem;" class="me-2">Connect</a>
+                            <a href="${element.download}" target="_blank" class="btn btn-primary mx-2 d-flex" style="vertical-align: middle;"><img src="./assets/imgs/play.png" alt="linkedin" style="width: 1.5rem;" class="me-2">Download</a>
                             <a href="company/?id=${element.id}" class="btn btn-outline-primary mx-2 d-flex" style="vertical-align: middle;"><img src="./assets/imgs/profile.png" alt="profile" style="width: 1.5rem;" class="me-2">Details</a>
                         </div>
                     </div>
@@ -70,4 +69,7 @@ document.getElementById('sort-by-company').addEventListener('click', () => {
                 grid.innerHTML = `<h1 class="text-center text-light">${data.message} - ${data.error}. Please try again in a few moments!</h1>`
             }
         })
+    document.getElementById('sort-by-founders').addEventListener('click', () => {
+        window.location.reload()
+    });
 })
